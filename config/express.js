@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ limit: limit, extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(dirname(fileURLToPath(import.meta.url)), "../public")));
 
-const baseURL = `/api/${process.env.API_VERSION}`;
+const baseURL = `/api/`;
 app.use(baseURL, routes);
 
 app.use(errorHandler);
